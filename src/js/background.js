@@ -5,7 +5,7 @@ export class Background extends Actor {
     constructor() {
         super()
         this.graphics.use(Resources.Background.toSprite())
-        this.scale = new Vector(0.5, 0.7)
-        this.pos = new Vector(500, 200)
+        this.scale = new Vector(0.5, 0.8)
+        this.pos = new Vector(400, 250)
     }
 }

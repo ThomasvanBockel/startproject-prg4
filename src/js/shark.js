@@ -1,4 +1,4 @@
-import { Actor, Vector, Keys } from "excalibur"
+import { Actor, Vector, Keys, Font,  FontUnit, Color, Label } from "excalibur"
 import { Resources } from './resources.js'
 import {Fish} from "./fish.js"
 let points = 0
@@ -22,8 +22,9 @@ export class Shark extends Actor {
     hitSomething(event) {
         if(event.other.owner instanceof Fish) {
             event.other.owner.kill() 
-            points++
-            console.log(`${points} punten!`)     
+            
+         this.scene.engine.addscore()   
+           
        }
     
 }
@@ -31,16 +32,16 @@ export class Shark extends Actor {
         let xspeed = 0;
         let yspeed = 0
         if (engine.input.keyboard.isHeld(Keys.Left)) {
-          xspeed = -100;
+          xspeed = -150;
         } 
         if (engine.input.keyboard.isHeld(Keys.Right)) {
-          xspeed = 100;
+          xspeed = 250;
         } 
         if (engine.input.keyboard.isHeld(Keys.Up)) {
-            yspeed = -100;
+            yspeed = -150;
           } 
           if (engine.input.keyboard.isHeld(Keys.Down)) {
-            yspeed = 100;
+            yspeed = 150;
           } 
         this.vel = new Vector(xspeed, yspeed);
     }

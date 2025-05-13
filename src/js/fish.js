@@ -13,10 +13,10 @@ this.scale = new Vector(0.7, 0.7)
     }
 
     fishLeft(e) {
-        e.target.pos = new Vector(randomInRange(800, 800), randomInRange(0, 450))
+        e.target.pos = new Vector(900, randomInRange(0, 450))
     }
     onPostKill() {
         this.unkill()
-        this.pos = new Vector(800, randomInRange(0, 450))
+        this.pos = new Vector(900, randomInRange(0, 450))
     }
 }

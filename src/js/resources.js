@@ -5,7 +5,8 @@ const Resources = {
     Fish: new ImageSource('images/fish.png'),
     Bubble: new ImageSource('images/bubble.png'),
     Shark: new ImageSource('images/shark.png'),
-   Background: new ImageSource('images/background.png')
+   Background: new ImageSource('images/background.png'),
+   NomNom: new Sound('sounds/hungry.wav')
 }
 
 
